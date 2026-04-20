@@ -1,9 +1,9 @@
 ﻿import { supabase, Product } from '@/lib/supabase'
 import Navbar from '@/components/Navbar'
 import FloatButtons from '@/components/FloatButtons'
-import ProductCard from '@/components/ProductCard'
 import SearchBar from '@/components/SearchBar'
 import WAIcon from '@/components/WAIcon'
+import TrustBar from '@/components/TrustBar'
 import { Phone, MessageCircle, MapPin, Clock, Truck, DollarSign, Globe, LayoutGrid, Sofa, BedDouble, Tv, UtensilsCrossed, Zap, Package } from 'lucide-react'
 
 export const revalidate = 0
@@ -19,7 +19,7 @@ export default async function Home() {
     <div>
       <Navbar />
       <FloatButtons />
-      <section className="min-h-screen bg-gradient-to-br from-[#0a1628] via-[#162544] to-[#0d1f3c] flex flex-col justify-center px-5 pt-24 pb-16 relative overflow-hidden">
+      <section className="min-h-screen bg-gradient-to-br from-[#0a1628] via-[#162544] to-[#0d1f3c] flex flex-col justify-center px-5 pt-28 pb-16 relative overflow-hidden">
         <div className="relative max-w-2xl">
           <h1 className="text-white font-black text-4xl sm:text-6xl leading-[1.1] mb-5">Quality Furniture and<br /><span className="text-[#c9933a]">Appliances</span> in Mwingi</h1>
           <p className="text-white/70 text-base leading-relaxed max-w-lg mb-8">Discover beautiful furniture, TVs, kitchen appliances and more at affordable prices. Visit us on Bus Park Road or order instantly via WhatsApp.</p>
@@ -34,15 +34,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-[#c9933a] px-5 py-3 overflow-x-auto">
-        <div className="flex gap-6 items-center min-w-max">
-          <span className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap"><span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center"><span className="text-[#c9933a] text-[10px] font-black">✓</span></span>Affordable Prices</span>
-          <span className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap"><span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center"><span className="text-[#c9933a] text-[10px] font-black">✓</span></span>Same-Day Delivery in Mwingi</span>
-          <span className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap"><span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center"><span className="text-[#c9933a] text-[10px] font-black">✓</span></span>Quality Guaranteed</span>
-          <span className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap"><span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center"><span className="text-[#c9933a] text-[10px] font-black">✓</span></span>Easy WhatsApp Orders</span>
-          <span className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap"><span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center"><span className="text-[#c9933a] text-[10px] font-black">✓</span></span>Countrywide Delivery</span>
-        </div>
-      </div>
+      <TrustBar />
       <section className="bg-white px-5 py-14">
         <p className="text-[#c9933a] text-xs font-bold tracking-widest uppercase mb-2">Shop by Category</p>
         <h2 className="text-[#0a1628] text-3xl font-black mb-6">What Are You Looking For?</h2>
