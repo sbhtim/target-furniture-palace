@@ -1,4 +1,4 @@
-﻿import { supabase, Product } from '@/lib/supabase'
+import { supabase, Product } from '@/lib/supabase'
 import Navbar from '@/components/Navbar'
 import FloatButtons from '@/components/FloatButtons'
 import ProductCard from '@/components/ProductCard'
@@ -44,7 +44,7 @@ export default async function Home() {
             </a>
           </div>
           <div className="flex gap-8 mt-14">
-            {[['4.9 â˜…','Google Rating'],['10k+','Happy Customers'],['Countrywide','Delivery']].map(([v,l])=>(
+            {[['4.9 ★','Google Rating'],['10k+','Happy Customers'],['Countrywide','Delivery']].map(([v,l])=>(
               <div key={l}>
                 <strong className="block text-[#c9933a] text-2xl font-bold">{v}</strong>
                 <span className="text-white/50 text-xs tracking-wide">{l}</span>
@@ -54,15 +54,17 @@ export default async function Home() {
         </div>
       </section>
 
-      <div className="bg-[#c9933a] px-5 py-3 overflow-x-auto"><div className="flex gap-6 items-center min-w-max mx-auto">
-{['Affordable Prices','Same-Day Delivery within Mwingi','Quality Guaranteed','Easy WhatsApp Orders','Countrywide Delivery'].map(t=>(
-          <span key={t} className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap">
-            <span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center">
-              <span className="text-[#c9933a] text-[10px] font-black">âœ“</span>
+      <div className="bg-[#c9933a] px-5 py-3 overflow-x-auto">
+        <div className="flex gap-6 items-center min-w-max mx-auto">
+          {['Affordable Prices','Same-Day Delivery in Mwingi','Quality Guaranteed','Easy WhatsApp Orders','Countrywide Delivery'].map(t=>(
+            <span key={t} className="flex items-center gap-1.5 text-[#0a1628] font-semibold text-sm whitespace-nowrap">
+              <span className="w-4 h-4 bg-[#0a1628] rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-[#c9933a] text-[10px] font-black">✓</span>
+              </span>
+              {t}
             </span>
-            {t}
-          </span>
-        ))}
+          ))}
+        </div>
       </div>
 
       <section className="bg-white px-5 py-14">
@@ -125,7 +127,7 @@ export default async function Home() {
         <p className="text-white/50 text-sm mb-8">From timely delivery to affordable pricing, built around you.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
-            [Truck,'Same-day delivery within Mwingi and its environments. Countrywide delivery also available.'],
+            [Truck,'Timely Delivery','Same-day delivery within Mwingi and its environments. Countrywide delivery also available.'],
             [DollarSign,'Best Prices','We work directly with suppliers to give you the most affordable prices in the region.'],
             [Globe,'Countrywide Delivery','We deliver to all counties across Kenya. Order from anywhere!'],
             [MessageCircle,'Easy Ordering','Just WhatsApp or call us and we will sort your order quickly and efficiently.'],
@@ -153,10 +155,10 @@ export default async function Home() {
             <div key={name} className="bg-[#fdf8f2] rounded-2xl p-5">
               <div className="flex gap-1 mb-3">
                 {Array.from({length: Number(stars)}).map((_,i)=>(
-                  <span key={i} className="text-[#c9933a] text-lg">â˜…</span>
+                  <span key={i} className="text-[#c9933a] text-lg">★</span>
                 ))}
                 {Array.from({length: 5 - Number(stars)}).map((_,i)=>(
-                  <span key={i} className="text-gray-300 text-lg">â˜…</span>
+                  <span key={i} className="text-gray-300 text-lg">★</span>
                 ))}
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">&quot;{text}&quot;</p>
@@ -173,7 +175,7 @@ export default async function Home() {
       </section>
 
       <section className="bg-[#fdf8f2] px-5 py-14" id="contact">
-        <p className="text-[#c9933a] text-xs font-bold tracking-widest uppercase mb-2">Find Us</p>
+        <p className="text-[#c9933a] text-xs font-bold tracking-widests uppercase mb-2">Find Us</p>
         <h2 className="text-[#0a1628] text-3xl font-black mb-6">Visit or Contact Us</h2>
         <div className="flex flex-col gap-3">
           <a href="tel:+254718187545" className="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-sm hover:translate-x-1 transition-transform">
@@ -234,7 +236,7 @@ export default async function Home() {
             <a key={label} href={href} className="hover:text-[#c9933a] transition-colors">{label}</a>
           ))}
         </div>
-        <div className="text-xs">Â© {new Date().getFullYear()} Target Furniture Palace Â· 138 Bus Park Rd, Mwingi Â· 0718 187 545</div>
+        <div className="text-xs">© {new Date().getFullYear()} Target Furniture Palace · 138 Bus Park Rd, Mwingi · 0718 187 545</div>
       </footer>
     </div>
   )
