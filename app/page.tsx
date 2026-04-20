@@ -159,7 +159,7 @@ export default async function Home() {
                   <span key={i} className="text-gray-300 text-lg">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">"{text}"</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-4">&quot;{text}&quot;</p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#c9933a] flex items-center justify-center font-bold text-[#0a1628] text-sm flex-shrink-0">{init}</div>
                 <div>
