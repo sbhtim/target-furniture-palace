@@ -7,10 +7,10 @@ import { Menu, X } from 'lucide-react'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628] h-16 flex items-center justify-between px-5 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628] h-16 flex items-center justify-between px-4 shadow-lg">
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/logo.png" alt="Logo" width={48} height={48} className="object-contain" />
-        <span className="font-black text-white text-xl tracking-tight leading-none">
+        <Image src="/logo.png" alt="Logo" width={36} height={36} className="object-contain flex-shrink-0" />
+        <span className="font-black text-white text-base tracking-tight leading-none">
           Target <span className="text-[#c9933a]">Furniture</span> Palace
         </span>
       </Link>
@@ -24,8 +24,8 @@ export default function Navbar() {
           WhatsApp Us
         </a>
       </div>
-      <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
-        {open ? <X size={24} /> : <Menu size={24} />}
+      <button className="md:hidden text-white p-1" onClick={() => setOpen(!open)}>
+        {open ? <X size={22} /> : <Menu size={22} />}
       </button>
       {open && (
         <div className="absolute top-16 left-0 right-0 bg-[#0a1628] border-t border-white/10 p-6 flex flex-col gap-5 md:hidden">
